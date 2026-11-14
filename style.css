@@ -138,7 +138,7 @@ a:focus-visible {
 }
 
 .shot.wide {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .row {
@@ -159,13 +159,13 @@ a:focus-visible {
   color: var(--muted);
 }
 
-/* 이미지 없이 글만 있는 첫 줄은 넓게 쓴다. */
-.row:not(:has(.shot)) {
-  grid-template-columns: 1fr;
+.shot.wide figcaption {
+  max-width: 620px;
+  margin-top: 28px;
 }
 
-.row:not(:has(.shot)) .text {
-  max-width: 620px;
+.shot.wide figcaption p {
+  color: var(--muted);
 }
 
 .plain {
