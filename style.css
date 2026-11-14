@@ -3,8 +3,10 @@
   --text: #22201c;
   --muted: #6b665d;
   --line: #e4dfd5;
-  --accent: #b5532a;
-  --accent-text: #fff;
+  --accent: #ffb300;
+  --accent-hover: #f0a500;
+  --accent-text: #241a00;
+  --focus: #8a5a00;
 }
 
 * {
@@ -114,12 +116,12 @@ p {
 }
 
 .button:hover {
-  background: #9c4622;
+  background: var(--accent-hover);
 }
 
 .button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--focus);
   outline-offset: 3px;
 }
 
@@ -143,15 +145,15 @@ a:focus-visible {
 
 .row {
   display: grid;
-  grid-template-columns: 1fr 1.7fr;
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   align-items: start;
   padding: 48px 0;
   border-top: 1px solid var(--line);
 }
 
 .row .text {
-  padding-top: 8px;
+  max-width: 620px;
 }
 
 .row p,
@@ -217,8 +219,7 @@ a:focus-visible {
   }
 
   .row {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
     padding: 36px 0;
   }
 }
